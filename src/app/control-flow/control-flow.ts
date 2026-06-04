@@ -19,6 +19,6 @@ export class ControlFlow {
   usersObj=signal([
     { id:1, name: "TJ","lastName":"abJ","age":33},
     { id:1, name: "sjhxJs","lastName":"KOPP","age":39},
-    { id:1, name: "Johnatahn","lastName":"jdj","age":13},
+    { id:1, name: "Johnatahn","lastName":"jdj","age":19},
   ])
 }
