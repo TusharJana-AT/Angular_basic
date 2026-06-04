@@ -1,0 +1,35 @@
+<h1>Change Status</h1>
+
+<select name="" id="" (change)="handleStatus($event)">
+  <option value="notStarted">Not Started</option>
+  <option value="inProgress">In Progress</option>
+  <option value="completed">Completed</option>
+  <option value="error">Error</option>
+</select>
+
+@if (status() === 'notStarted') {
+  <h3 style="color: burlywood">{{ status() }}</h3>
+} @else if (status() === 'inProgress') {
+  <h3 style="color: cornflowerblue">{{ status() }}</h3>
+} @else if (status() === 'completed') {
+  <h3 style="color: greenyellow">{{ status() }}</h3>
+} @else if (status() === 'error') {
+  <h3 style="color: red">{{ status() }}</h3>
+}
+
+<div>
+  <ul>
+    @for (user of users(); track user) {
+      <li>{{ user }}</li>
+    }
+  </ul>
+</div>
+
+
+<div>
+    <ul>
+        @for(user of usersObj(); track user.id){
+            <li>{{user.name + " " +user.lastName}}  Age :  {{user.age}}</li>
+        }
+    </ul>
+</div>

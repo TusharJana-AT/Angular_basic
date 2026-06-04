@@ -1,0 +1,10 @@
+<p>input-event</p>
+
+
+
+<h1>INPUT</h1>
+
+<h3>{{myName()}}</h3>
+Name : <input type="text" [value]="myName()" (input)="setValue($event.target.value)" />
+
+<button (click)="reset()">Reset</button>
