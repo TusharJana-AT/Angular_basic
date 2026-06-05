@@ -1,0 +1,31 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  padding: 1rem;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.error-list {
+  color: red;
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0 0;
+  padding-left: 0;
+  list-style-position: inside;
+}
+.error-list p {
+  margin: 0;
+}

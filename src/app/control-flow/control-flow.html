@@ -7,7 +7,7 @@
   <option value="error">Error</option>
 </select>
 
-@if (status() === 'notStarted') {
+<!-- @if (status() === 'notStarted') {
   <h3 style="color: burlywood">{{ status() }}</h3>
 } @else if (status() === 'inProgress') {
   <h3 style="color: cornflowerblue">{{ status() }}</h3>
@@ -15,6 +15,24 @@
   <h3 style="color: greenyellow">{{ status() }}</h3>
 } @else if (status() === 'error') {
   <h3 style="color: red">{{ status() }}</h3>
+} -->
+
+@switch(status()){
+  @case('notStarted'){
+    <h3 style="color: burlywood">{{ status() }}</h3>
+  }
+  @case('inProgress'){
+    <h3 style="color: cornflowerblue">{{ status() }}</h3>
+  }
+  @case('completed'){
+    <h3 style="color: greenyellow">{{ status() }}</h3>
+  }
+  @case('error'){
+    <h3 style="color: red">{{ status() }}</h3>
+  }
+  @default{
+    <h3>Not Found</h3>
+  }
 }
 
 <div>

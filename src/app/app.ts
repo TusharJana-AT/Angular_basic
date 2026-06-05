@@ -4,10 +4,11 @@ import { Profile } from './profile/profile';
 import { Counter } from './counter/counter';
 import { ControlFlow } from './control-flow/control-flow';
 import { InputEvent } from './input-event/input-event';
+import { FormSignal } from './form-signal/form-signal';
 
 @Component({
   selector: 'app-root',
-  imports: [Counter,ControlFlow,InputEvent],
+  imports: [Counter,ControlFlow,InputEvent,FormSignal],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
