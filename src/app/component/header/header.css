@@ -1,0 +1,11 @@
+ul{
+    display: flex; 
+    gap: 30px;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+li{
+   font-size: large;
+    
+}

@@ -1,9 +1,6 @@
 <h1>Components</h1>
 
-<app-counter>
-    ABCD
-</app-counter>
-
+<!-- <app-counter> ABCD </app-counter> -->
 
 <!-- 
 <button (click)="callMe()"> Me</button> -->
@@ -14,10 +11,8 @@
 <h3>{{count}}</h3>
 <button (click)="counter('plus')">+</button> -->
 
-
 <!-- <h1>Event</h1>
 <input type="text" (input)="handleEvent($event)"> -->
-
 
 <!-- 
 <h5>Height : {{height()}}</h5>
@@ -31,5 +26,43 @@
  <app-control-flow></app-control-flow>
 
 <app-input-event></app-input-event> -->
-
+<!-- 
 <app-form-signal></app-form-signal>
+
+<input type="text" placeholder="Add names" (input)="this.newUser.set($event.target.value)" [value]="newUser()"/>
+<button (click)="AddUsers()">Submit</button>
+<app-child [userName]="userName()"></app-child>
+
+<h3>SelectedUser : {{selectedUserName()}}</h3>
+
+@for (user of users(); track user) {
+  <app-child 
+  [usersName]="user"
+  (selectedUser)="selectedUser($event)"
+  ></app-child>
+}
+
+<app-display-counter>
+
+</app-display-counter>
+
+
+<hr>
+
+<app-control-counter></app-control-counter>
+
+<hr>
+
+<app-pipes></app-pipes> -->
+
+
+
+<h1>
+  Router
+</h1>
+
+
+
+<app-header></app-header>
+
+<router-outlet></router-outlet>
