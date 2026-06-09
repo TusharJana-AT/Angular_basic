@@ -13,10 +13,13 @@ import { Home } from './Pages/home/home';
 import { About } from './Pages/about/about';
 import { Login } from './Pages/login/login';
 import { Header } from './component/header/header';
+import { ReactiveForm } from './reactive-form/reactive-form';
+import { ReactiveFormGroup } from './reactive-form-group/reactive-form-group';
+import { TemplateForm } from './template-form/template-form';
 
 @Component({
   selector: 'app-root',
-  imports: [Counter, ControlFlow, InputEvent, FormSignal, Child,DisplayCOunter,ControlCOunter,Pipes,RouterOutlet,RouterLink,Header],
+  imports: [Counter, ControlFlow, InputEvent, FormSignal, Child,DisplayCOunter,ControlCOunter,Pipes,RouterOutlet,RouterLink,Header,ReactiveForm,ReactiveFormGroup,TemplateForm],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

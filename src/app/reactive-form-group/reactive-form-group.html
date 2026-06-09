@@ -1,0 +1,36 @@
+<h1>reactive-form-group works!</h1>
+
+
+<form [formGroup]="loginForm" (ngSubmit)="handleSubmit()" method="post">
+    Name : <input type="text" formControlName="name">
+    @if(name?.hasError('required') && name?.touched){
+        <span>Name field Required</span>
+    }
+    @if(name?.errors?.['maxlength'] && name?.touched){
+        <span>Name is not Valid</span>
+    }
+    
+    <br>
+    Email : <input type="text" formControlName="email">
+
+    @if(email?.hasError('required') && email?.touched){
+        <span>Email field Required</span>
+    }
+    @if(email?.errors?.['email'] && email?.touched){
+        <span>Email is not Valid</span>
+    }
+
+<br>
+    Password : <input type="password" formControlName="password">
+    @if(password?.hasError('required') && password?.touched){
+        <span>Password field Required</span>
+    }
+    @if(password?.errors?.['minlength'] && password?.touched){
+        <span>Password is too short </span>
+    }
+<br>
+    <button [disabled]="loginForm.invalid">Submit</button>
+
+
+    <button (click)="reset()">Reset</button>
+</form>

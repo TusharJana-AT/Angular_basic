@@ -1,0 +1,19 @@
+<h1>template-form works!</h1>
+
+<form #userForm="ngForm" (ngSubmit)="addUser(userForm.value)">
+    Name : <input name="username" type="text" ngModel>
+
+    <br><br>
+    Password: <input name="password" type="password" ngModel>
+
+    <br><br>
+
+    Gender : <select name="gender" ngModel>
+        <option value="">Select your real gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+
+
+    <button>Submit</button>
+</form>
